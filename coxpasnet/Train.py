@@ -83,7 +83,7 @@ def trainCoxPASNet(train_x, train_age, train_ytime, train_yevent, \
 				copy_net.train()
 				y_tmp = copy_net(train_x, train_age)
 				loss_tmp = neg_par_log_likelihood(y_tmp, train_ytime, train_yevent)
-				S_loss.append(loss_tmp)
+				S_loss.append(loss_tmp.item())
 			###apply cubic interpolation
 			interp_S_loss = interp1d(S_set, S_loss, kind='cubic')
 			interp_S_set = torch.linspace(min(S_set), max(S_set), steps=100)

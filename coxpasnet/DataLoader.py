@@ -60,7 +60,7 @@ def load_pathway(path, dtype):
 	Output:
 		PATHWAY_MASK: a Pytorch tensor of the bi-adjacency matrix of pathways.
 	'''
-	pathway_mask = pd.read_csv(path, index_col = 0).as_matrix()
+	pathway_mask = pd.read_csv(path, index_col = 0).to_numpy()
 
 	PATHWAY_MASK = torch.from_numpy(pathway_mask).type(dtype)
 	###if gpu is being used

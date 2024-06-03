@@ -19,11 +19,11 @@ Num_EPOCHS = 20000 ###for training
 ###sub-network setup
 Dropout_Rate = [0.7, 0.5]
 ''' load data and pathway '''
-pathway_mask = load_pathway("../data/pathway_mask.csv", dtype)
+pathway_mask = load_pathway("./data/pathway_mask.csv", dtype)
 
-x_train, ytime_train, yevent_train, age_train = load_data("../data/train.csv", dtype)
-x_valid, ytime_valid, yevent_valid, age_valid = load_data("../data/validation.csv", dtype)
-x_test, ytime_test, yevent_test, age_test = load_data("../data/test.csv", dtype)
+x_train, ytime_train, yevent_train, age_train = load_data("./data/train.csv", dtype)
+x_valid, ytime_valid, yevent_valid, age_valid = load_data("./data/validation.csv", dtype)
+x_test, ytime_test, yevent_test, age_test = load_data("./data/test.csv", dtype)
 
 opt_l2_loss = 0
 opt_lr_loss = 0
